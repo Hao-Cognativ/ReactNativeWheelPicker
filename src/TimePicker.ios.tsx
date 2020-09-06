@@ -2,14 +2,14 @@ import React from "react";
 import DatePicker from './DatePicker.ios'
 
 interface Props {
-  initDate: Date;
-  onTimeSelected?: Function;
+  value: Date;
+  onChange: Function;
   disabled?: boolean;
 }
 
 const TimePicker: React.FC<Props> = props => {
   return (
-    <DatePicker mode={'time'} {...props} onDateSelected={props.onTimeSelected}/>
+    <DatePicker mode={'time'} {...props} />
   );
 };
 
