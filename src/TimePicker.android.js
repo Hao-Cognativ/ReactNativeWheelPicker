@@ -18,8 +18,8 @@ type Event = {
 }
 
 type Props = {
-  initDate: string,
-  onTimeSelected: Date => void,
+  value: string,
+  onChange: Date => void,
   hours: Array<number>,
   minutes: Array<string>,
   format24: boolean,
@@ -37,8 +37,8 @@ type State = {
 export default class TimePicker extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props)
-    const { initDate, format24, minutes } = props
-    const selectedDate = initDate ? new Date(initDate) : new Date()
+    const { value, format24, minutes } = props
+    const selectedDate = value ? new Date(value) : new Date()
     const time12format = hourTo12Format(selectedDate.getHours())
     const time24format = selectedDate.getHours()
     const hours = this.props.hours || getHoursArray(format24)
@@ -136,8 +136,8 @@ export default class TimePicker extends React.Component<Props, State> {
   }
 
   onTimeSelected(selectedDate: Date) {
-    if (this.props.onTimeSelected) {
-      this.props.onTimeSelected(selectedDate)
+    if (this.props.onChange) {
+      this.props.onChange(selectedDate)
     }
   }
 }
