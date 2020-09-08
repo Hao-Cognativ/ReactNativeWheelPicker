@@ -217,7 +217,7 @@ PODS:
     - React-cxxreact (= 0.61.5)
     - React-jsi (= 0.61.5)
     - ReactCommon/jscallinvoker (= 0.61.5)
-  - RNCPicker (1.6.6):
+  - RNCPicker (1.7.1):
     - React
   - RNDateTimePicker (3.0.2):
     - React
@@ -341,7 +341,7 @@ SPEC CHECKSUMS:
   React-RCTText: 9ccc88273e9a3aacff5094d2175a605efa854dbe
   React-RCTVibration: a49a1f42bf8f5acf1c3e297097517c6b3af377ad
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
-  RNCPicker: 494015f2b7ec4bee5484b6f235aa19691426dcdb
+  RNCPicker: a2bf7bad059f23de52add203c3c5a3bc5b5239d8
   RNDateTimePicker: a84d2b439666c9243d42a8396c588d4d1d36e3f3
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 

@@ -42,13 +42,14 @@ const App: () => React$Node = () => {
           <WheelPicker onItemSelected={(index) => setSelectedItem(index)} data={weekdays}/>
           <Text>{moment(time).format('hh:mm a')}</Text>
           <TimePicker
-            value={time} 
-            onChange={(event, time) => {
-              setTime(time)
-            }
-          }/>
+            initDate={time} 
+            onTimeSelected={(event) => setTime(event)}/>
           <Text>{moment(date).format('DD.MM.YY hh:mm a')}</Text>
-          <DatePicker mode={'date'} onChange={(event, date) => setDate(date)} value={date}/>
+          <DatePicker
+            mode={'date'}
+            onDateSelected={date => setDate(date)}
+            initDate={date}
+          />
         </ScrollView>
       </SafeAreaView>
     </>

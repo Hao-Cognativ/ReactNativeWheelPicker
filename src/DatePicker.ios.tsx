@@ -3,21 +3,23 @@ import { View } from "react-native";
 import RNDateTimePicker from "@react-native-community/datetimepicker";
 
 interface Props {
-  value: Date;
-  onChange: Function;
+  initDate: Date;
+  onDateSelected?: Function;
   disabled?: boolean;
+  mode: string;
 }
 
 const DatePicker: React.FC<Props> = props => {
-  const { onChange, disabled } = props;
+  const { initDate, onDateSelected, disabled, mode="date" } = props;
   return (
     <View pointerEvents={disabled ? "none" : "auto"}>
       <RNDateTimePicker
+        value={initDate}
         onChange={(event, date) => {
-          if (onChange) onChange(date)
+          if (onDateSelected) onDateSelected(date)
         }}
-        mode={'date'}
-        {...props}
+        mode={mode}
+        disabled={disabled}
       />
     </View>
   );
