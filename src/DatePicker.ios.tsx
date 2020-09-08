@@ -20,6 +20,7 @@ const DatePicker: React.FC<Props> = props => {
         }}
         mode={mode}
         disabled={disabled}
+        style={props?.style}
       />
     </View>
   );
