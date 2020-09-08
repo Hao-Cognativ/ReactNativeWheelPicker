@@ -8,6 +8,8 @@
 
 A simple Wheel Picker for Android (For IOs is using Picker from react-native)
 
+## This fork updated the deprecated imports including Picker, DatePickerIOS and corresponding props
+
 ## Example
 
 You can clone the repo and run example from ./example folder
