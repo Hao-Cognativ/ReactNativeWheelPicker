@@ -5,6 +5,7 @@ interface Props {
   initDate: Date;
   onTimeSelected?: Function;
   disabled?: boolean;
+  display?: string;
 }
 
 const TimePicker: React.FC<Props> = props => {

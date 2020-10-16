@@ -7,6 +7,7 @@ interface Props {
   onDateSelected?: Function;
   disabled?: boolean;
   mode: string;
+  display?: string;
 }
 
 const DatePicker: React.FC<Props> = props => {
@@ -21,6 +22,7 @@ const DatePicker: React.FC<Props> = props => {
         mode={mode}
         disabled={disabled}
         style={props?.style}
+        display={props.display}
       />
     </View>
   );
